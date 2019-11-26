@@ -1,0 +1,49 @@
+.breadcrumb_background {
+  background-image: url(//bizweb.dktcdn.net/100/350/980/themes/714097/assets/bg_breadcrumb.png?1553847975699);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  float: left;
+  padding: 60px 0;
+}
+.title_page {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 50px;
+  font-family: "Quicksand",sans-serif;
+  color: #000;
+  margin: 0;
+  text-align: center;
+}
+.bg_base_lr{
+  width: 100%;
+  display: block;
+  float: left;
+  margin-top: 30px;
+}
+.form-control{
+  height: 50px!important;
+  border-radius: 10px;
+}
+.btn-primary{
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: none;
+  border-radius: 30px;
+  padding: 0 15px;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  background: #91ad41 !important;
+  border:1px solid #fff;
+  font-family: "Quicksand",sans-serif;
+}
+.content_register{
+  float: left;
+  width: 100%;
+  text-align: center;
+  color: #707070;
+  margin-top: 25px;
+  font-family: "Quicksand",sans-serif;
+}

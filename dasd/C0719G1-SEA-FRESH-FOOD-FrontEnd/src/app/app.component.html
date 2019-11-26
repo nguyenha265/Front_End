@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trang chủ</title>
+  <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+  <div class="mid-header wid_100 f-left">
+    <div class="container">
+      <div class="row">
+        <div class="content_header">
+          <div class="header-main">
+            <div class="col-lg-3">
+              <div class="logo">
+                <a href="/" class="logo-wrapper ">
+                  <img src="../assets/image/logo.png" height="80" width="230"/>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-lg-6 ">
+              <div class="wrap_main hidden-xs hidden-sm">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="bg-header-nav hidden-xs hidden-sm">
+                      <div>
+                        <div class="row row-noGutter-2">
+                          <nav class="header-nav">
+                            <ul class="item_big">
+
+                              <li class="nav-item active ">
+                                <a class="a-img" routerLink="home">
+                                  <span>Trang chủ</span>
+                                </a>
+                              </li>
+
+                              <li class="nav-item ">
+                                <a class="a-img">
+                                  <span>Giới thiệu</span>
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="a-img">
+                                  <span>Sản phẩm</span><i class="fa fa-caret-down"></i>
+                                </a>
+                              </li>
+
+                              <li class="nav-item ">
+                                <a class="a-img">
+                                  <span>Tin tức</span>
+                                </a>
+                              </li>
+
+
+                              <li class="nav-item ">
+                                <a class="a-img">
+                                  <span>Liên hệ</span>
+                                </a>
+                              </li>
+
+
+                            </ul>
+                          </nav>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 ">
+              <div class="header-right">
+                <div class="hotline_dathang hotline_2 use_register user_hover hidden-xs hidden-sm">
+                  <div class="icon_hotline icon2">
+                    <i class='fas fa-user' style='font-size:25px;color:#91ad41'></i>
+                  </div>
+                  <ul class="content_hotline login_and_register" routerLinkActive="active" *ngIf="userService.userOnline.userName==''">
+                    <li><a class="register_click" routerLink="registered">Đăng ký</a></li>
+                    <li class="nav-item">
+                      <a class="login_click" routerLink="auth/login">Đăng nhập</a>
+                    </li>
+                  </ul>
+                  <ul class="content_hotline login_and_register" routerLinkActive="active" *ngIf="userService.userOnline.userName!=''">
+                    <li><a class="register_click" routerLink="registered">{{userService.userOnline.userName}}</a></li>
+                    <li class="nav-item">
+                      <a class="login_click" routerLink="auth/login">Đăng xuất</a>
+                    </li>
+                  </ul>
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div>
+          <router-outlet></router-outlet>
+          {{userService.userOnline.jwtToken}}
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+</body>
+</html>
